@@ -1,0 +1,35 @@
+- hosts: localhost
+  gather_facts: False
+  tasks:
+      - file:
+          path: /tmp/gears
+          state: directory
+
+- name: make gears by name 
+  hosts: localhost
+  gather_facts: False
+  tasks:
+      - sprocket:
+      - bevel:
+      - worm_drive:
+      - herringbone:
+
+- name: make a generic gear
+  hosts: localhost
+  gather_facts: False
+  tasks:
+      - set_fact:
+          gear_type: sprocket
+      - gear:
+
+      - set_fact:
+          gear_type: bevel
+      - gear:
+
+      - set_fact:
+          gear_type: worm_drive
+      - gear:
+
+      - set_fact:
+          gear_type: herringbone
+      - gear:
