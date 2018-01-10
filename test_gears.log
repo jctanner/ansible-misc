@@ -1,0 +1,293 @@
+# running ansible-checkout-versions ...
+# running ansible-list-versions ...
+###################################
+devel-88318c5fe5
+###################################
+# running  /var/cache/ansible/ansible.checkout.clean/hacking/env-setup ...
+ansible-playbook 2.5.0 (devel 88318c5fe5) last updated 2018/01/10 09:29:14 (GMT -400)
+  config file = None
+  configured module search path = [u'/home/jtanner/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /var/cache/ansible/ansible.checkout.clean/lib/ansible
+  executable location = /var/cache/ansible/ansible.checkout.clean/bin/ansible-playbook
+  python version = 2.7.14 (default, Dec 11 2017, 16:08:01) [GCC 7.2.1 20170915 (Red Hat 7.2.1-2)]
+No config file found; using defaults
+setting up inventory plugins
+Parsed /home/jtanner/workspace/issues/AP-DEVCONF/ansible-misc/inventory inventory source with ini plugin
+Loading callback plugin default of type stdout, v2.0 from /var/cache/ansible/ansible.checkout.clean/lib/ansible/plugins/callback/default.py
+
+PLAYBOOK: test_gears.yml ******************************************************************************************
+3 plays in test_gears.yml
+
+PLAY [localhost] **************************************************************************************************
+META: ran handlers
+
+TASK [file] *******************************************************************************************************
+task path: /home/jtanner/workspace/issues/AP-DEVCONF/ansible-misc/test_gears.yml:4
+Using module file /var/cache/ansible/ansible.checkout.clean/lib/ansible/modules/files/file.py
+<127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: jtanner
+<127.0.0.1> EXEC /bin/sh -c 'echo ~ && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jtanner/.ansible/tmp/ansible-tmp-1515594559.55-44668586154995 `" && echo ansible-tmp-1515594559.55-44668586154995="` echo /home/jtanner/.ansible/tmp/ansible-tmp-1515594559.55-44668586154995 `" ) && sleep 0'
+<127.0.0.1> PUT /tmp/tmpwao_a1 TO /home/jtanner/.ansible/tmp/ansible-tmp-1515594559.55-44668586154995/file.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jtanner/.ansible/tmp/ansible-tmp-1515594559.55-44668586154995/ /home/jtanner/.ansible/tmp/ansible-tmp-1515594559.55-44668586154995/file.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/usr/bin/python /home/jtanner/.ansible/tmp/ansible-tmp-1515594559.55-44668586154995/file.py; rm -rf "/home/jtanner/.ansible/tmp/ansible-tmp-1515594559.55-44668586154995/" > /dev/null 2>&1 && sleep 0'
+ok: [localhost] => {
+    "attempts": 1, 
+    "changed": false, 
+    "diff": {
+        "after": {
+            "path": "/tmp/gears"
+        }, 
+        "before": {
+            "path": "/tmp/gears"
+        }
+    }, 
+    "gid": 1000, 
+    "group": "jtanner", 
+    "invocation": {
+        "module_args": {
+            "attributes": null, 
+            "backup": null, 
+            "content": null, 
+            "delimiter": null, 
+            "diff_peek": null, 
+            "directory_mode": null, 
+            "follow": false, 
+            "force": false, 
+            "group": null, 
+            "mode": null, 
+            "original_basename": null, 
+            "owner": null, 
+            "path": "/tmp/gears", 
+            "recurse": false, 
+            "regexp": null, 
+            "remote_src": null, 
+            "selevel": null, 
+            "serole": null, 
+            "setype": null, 
+            "seuser": null, 
+            "src": null, 
+            "state": "directory", 
+            "unsafe_writes": null, 
+            "validate": null
+        }
+    }, 
+    "mode": "0775", 
+    "owner": "jtanner", 
+    "path": "/tmp/gears", 
+    "size": 120, 
+    "state": "directory", 
+    "uid": 1000
+}
+META: ran handlers
+META: ran handlers
+
+PLAY [make gears by name] *****************************************************************************************
+META: ran handlers
+
+TASK [sprocket] ***************************************************************************************************
+task path: /home/jtanner/workspace/issues/AP-DEVCONF/ansible-misc/test_gears.yml:12
+Using module file /home/jtanner/workspace/issues/AP-DEVCONF/ansible-misc/library/sprocket.py
+<127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: jtanner
+<127.0.0.1> EXEC /bin/sh -c 'echo ~ && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jtanner/.ansible/tmp/ansible-tmp-1515594559.9-141118838961437 `" && echo ansible-tmp-1515594559.9-141118838961437="` echo /home/jtanner/.ansible/tmp/ansible-tmp-1515594559.9-141118838961437 `" ) && sleep 0'
+<127.0.0.1> PUT /tmp/tmp70X_gv TO /home/jtanner/.ansible/tmp/ansible-tmp-1515594559.9-141118838961437/sprocket.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jtanner/.ansible/tmp/ansible-tmp-1515594559.9-141118838961437/ /home/jtanner/.ansible/tmp/ansible-tmp-1515594559.9-141118838961437/sprocket.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/usr/bin/python /home/jtanner/.ansible/tmp/ansible-tmp-1515594559.9-141118838961437/sprocket.py; rm -rf "/home/jtanner/.ansible/tmp/ansible-tmp-1515594559.9-141118838961437/" > /dev/null 2>&1 && sleep 0'
+ok: [localhost] => {
+    "attempts": 1, 
+    "changed": false, 
+    "invocation": {
+        "module_args": {
+            "state": "present"
+        }
+    }
+}
+
+TASK [bevel] ******************************************************************************************************
+task path: /home/jtanner/workspace/issues/AP-DEVCONF/ansible-misc/test_gears.yml:13
+Using module file /home/jtanner/workspace/issues/AP-DEVCONF/ansible-misc/library/bevel.py
+<127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: jtanner
+<127.0.0.1> EXEC /bin/sh -c 'echo ~ && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jtanner/.ansible/tmp/ansible-tmp-1515594560.22-47797257472528 `" && echo ansible-tmp-1515594560.22-47797257472528="` echo /home/jtanner/.ansible/tmp/ansible-tmp-1515594560.22-47797257472528 `" ) && sleep 0'
+<127.0.0.1> PUT /tmp/tmpGnvkuE TO /home/jtanner/.ansible/tmp/ansible-tmp-1515594560.22-47797257472528/bevel.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jtanner/.ansible/tmp/ansible-tmp-1515594560.22-47797257472528/ /home/jtanner/.ansible/tmp/ansible-tmp-1515594560.22-47797257472528/bevel.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/usr/bin/python /home/jtanner/.ansible/tmp/ansible-tmp-1515594560.22-47797257472528/bevel.py; rm -rf "/home/jtanner/.ansible/tmp/ansible-tmp-1515594560.22-47797257472528/" > /dev/null 2>&1 && sleep 0'
+ok: [localhost] => {
+    "attempts": 1, 
+    "changed": false, 
+    "invocation": {
+        "module_args": {
+            "state": "present"
+        }
+    }
+}
+
+TASK [worm_drive] *************************************************************************************************
+task path: /home/jtanner/workspace/issues/AP-DEVCONF/ansible-misc/test_gears.yml:14
+Using module file /home/jtanner/workspace/issues/AP-DEVCONF/ansible-misc/library/worm_drive.py
+<127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: jtanner
+<127.0.0.1> EXEC /bin/sh -c 'echo ~ && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jtanner/.ansible/tmp/ansible-tmp-1515594560.56-279764151513028 `" && echo ansible-tmp-1515594560.56-279764151513028="` echo /home/jtanner/.ansible/tmp/ansible-tmp-1515594560.56-279764151513028 `" ) && sleep 0'
+<127.0.0.1> PUT /tmp/tmpYmru5z TO /home/jtanner/.ansible/tmp/ansible-tmp-1515594560.56-279764151513028/worm_drive.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jtanner/.ansible/tmp/ansible-tmp-1515594560.56-279764151513028/ /home/jtanner/.ansible/tmp/ansible-tmp-1515594560.56-279764151513028/worm_drive.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/usr/bin/python /home/jtanner/.ansible/tmp/ansible-tmp-1515594560.56-279764151513028/worm_drive.py; rm -rf "/home/jtanner/.ansible/tmp/ansible-tmp-1515594560.56-279764151513028/" > /dev/null 2>&1 && sleep 0'
+ok: [localhost] => {
+    "attempts": 1, 
+    "changed": false, 
+    "invocation": {
+        "module_args": {
+            "state": "present"
+        }
+    }
+}
+
+TASK [herringbone] ************************************************************************************************
+task path: /home/jtanner/workspace/issues/AP-DEVCONF/ansible-misc/test_gears.yml:15
+Using module file /home/jtanner/workspace/issues/AP-DEVCONF/ansible-misc/library/herringbone.py
+<127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: jtanner
+<127.0.0.1> EXEC /bin/sh -c 'echo ~ && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jtanner/.ansible/tmp/ansible-tmp-1515594560.93-27978814577003 `" && echo ansible-tmp-1515594560.93-27978814577003="` echo /home/jtanner/.ansible/tmp/ansible-tmp-1515594560.93-27978814577003 `" ) && sleep 0'
+<127.0.0.1> PUT /tmp/tmppRSVfu TO /home/jtanner/.ansible/tmp/ansible-tmp-1515594560.93-27978814577003/herringbone.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jtanner/.ansible/tmp/ansible-tmp-1515594560.93-27978814577003/ /home/jtanner/.ansible/tmp/ansible-tmp-1515594560.93-27978814577003/herringbone.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/usr/bin/python /home/jtanner/.ansible/tmp/ansible-tmp-1515594560.93-27978814577003/herringbone.py; rm -rf "/home/jtanner/.ansible/tmp/ansible-tmp-1515594560.93-27978814577003/" > /dev/null 2>&1 && sleep 0'
+ok: [localhost] => {
+    "attempts": 1, 
+    "changed": false, 
+    "invocation": {
+        "module_args": {
+            "state": "present"
+        }
+    }
+}
+META: ran handlers
+META: ran handlers
+
+PLAY [make a generic gear] ****************************************************************************************
+META: ran handlers
+
+TASK [set_fact] ***************************************************************************************************
+task path: /home/jtanner/workspace/issues/AP-DEVCONF/ansible-misc/test_gears.yml:21
+ok: [localhost] => {
+    "ansible_facts": {
+        "gear_type": "sprocket"
+    }, 
+    "attempts": 1, 
+    "changed": false
+}
+
+TASK [gear] *******************************************************************************************************
+task path: /home/jtanner/workspace/issues/AP-DEVCONF/ansible-misc/test_gears.yml:23
+Running sprocket
+Using module file /home/jtanner/workspace/issues/AP-DEVCONF/ansible-misc/library/sprocket.py
+<127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: jtanner
+<127.0.0.1> EXEC /bin/sh -c 'echo ~ && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jtanner/.ansible/tmp/ansible-tmp-1515594561.17-15720041868663 `" && echo ansible-tmp-1515594561.17-15720041868663="` echo /home/jtanner/.ansible/tmp/ansible-tmp-1515594561.17-15720041868663 `" ) && sleep 0'
+<127.0.0.1> PUT /tmp/tmp7jRo1T TO /home/jtanner/.ansible/tmp/ansible-tmp-1515594561.17-15720041868663/sprocket.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jtanner/.ansible/tmp/ansible-tmp-1515594561.17-15720041868663/ /home/jtanner/.ansible/tmp/ansible-tmp-1515594561.17-15720041868663/sprocket.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/usr/bin/python /home/jtanner/.ansible/tmp/ansible-tmp-1515594561.17-15720041868663/sprocket.py; rm -rf "/home/jtanner/.ansible/tmp/ansible-tmp-1515594561.17-15720041868663/" > /dev/null 2>&1 && sleep 0'
+ok: [localhost] => {
+    "attempts": 1, 
+    "changed": false, 
+    "invocation": {
+        "module_args": {
+            "state": "present"
+        }
+    }
+}
+
+TASK [set_fact] ***************************************************************************************************
+task path: /home/jtanner/workspace/issues/AP-DEVCONF/ansible-misc/test_gears.yml:25
+ok: [localhost] => {
+    "ansible_facts": {
+        "gear_type": "bevel"
+    }, 
+    "attempts": 1, 
+    "changed": false
+}
+
+TASK [gear] *******************************************************************************************************
+task path: /home/jtanner/workspace/issues/AP-DEVCONF/ansible-misc/test_gears.yml:27
+Running bevel
+Using module file /home/jtanner/workspace/issues/AP-DEVCONF/ansible-misc/library/bevel.py
+<127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: jtanner
+<127.0.0.1> EXEC /bin/sh -c 'echo ~ && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jtanner/.ansible/tmp/ansible-tmp-1515594561.4-259131371953360 `" && echo ansible-tmp-1515594561.4-259131371953360="` echo /home/jtanner/.ansible/tmp/ansible-tmp-1515594561.4-259131371953360 `" ) && sleep 0'
+<127.0.0.1> PUT /tmp/tmpr4A85v TO /home/jtanner/.ansible/tmp/ansible-tmp-1515594561.4-259131371953360/bevel.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jtanner/.ansible/tmp/ansible-tmp-1515594561.4-259131371953360/ /home/jtanner/.ansible/tmp/ansible-tmp-1515594561.4-259131371953360/bevel.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/usr/bin/python /home/jtanner/.ansible/tmp/ansible-tmp-1515594561.4-259131371953360/bevel.py; rm -rf "/home/jtanner/.ansible/tmp/ansible-tmp-1515594561.4-259131371953360/" > /dev/null 2>&1 && sleep 0'
+ok: [localhost] => {
+    "attempts": 1, 
+    "changed": false, 
+    "invocation": {
+        "module_args": {
+            "state": "present"
+        }
+    }
+}
+
+TASK [set_fact] ***************************************************************************************************
+task path: /home/jtanner/workspace/issues/AP-DEVCONF/ansible-misc/test_gears.yml:29
+ok: [localhost] => {
+    "ansible_facts": {
+        "gear_type": "worm_drive"
+    }, 
+    "attempts": 1, 
+    "changed": false
+}
+
+TASK [gear] *******************************************************************************************************
+task path: /home/jtanner/workspace/issues/AP-DEVCONF/ansible-misc/test_gears.yml:31
+Running worm_drive
+Using module file /home/jtanner/workspace/issues/AP-DEVCONF/ansible-misc/library/worm_drive.py
+<127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: jtanner
+<127.0.0.1> EXEC /bin/sh -c 'echo ~ && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jtanner/.ansible/tmp/ansible-tmp-1515594561.64-207869015617895 `" && echo ansible-tmp-1515594561.64-207869015617895="` echo /home/jtanner/.ansible/tmp/ansible-tmp-1515594561.64-207869015617895 `" ) && sleep 0'
+<127.0.0.1> PUT /tmp/tmpksWi1f TO /home/jtanner/.ansible/tmp/ansible-tmp-1515594561.64-207869015617895/worm_drive.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jtanner/.ansible/tmp/ansible-tmp-1515594561.64-207869015617895/ /home/jtanner/.ansible/tmp/ansible-tmp-1515594561.64-207869015617895/worm_drive.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/usr/bin/python /home/jtanner/.ansible/tmp/ansible-tmp-1515594561.64-207869015617895/worm_drive.py; rm -rf "/home/jtanner/.ansible/tmp/ansible-tmp-1515594561.64-207869015617895/" > /dev/null 2>&1 && sleep 0'
+ok: [localhost] => {
+    "attempts": 1, 
+    "changed": false, 
+    "invocation": {
+        "module_args": {
+            "state": "present"
+        }
+    }
+}
+
+TASK [set_fact] ***************************************************************************************************
+task path: /home/jtanner/workspace/issues/AP-DEVCONF/ansible-misc/test_gears.yml:33
+ok: [localhost] => {
+    "ansible_facts": {
+        "gear_type": "herringbone"
+    }, 
+    "attempts": 1, 
+    "changed": false
+}
+
+TASK [gear] *******************************************************************************************************
+task path: /home/jtanner/workspace/issues/AP-DEVCONF/ansible-misc/test_gears.yml:35
+Running herringbone
+Using module file /home/jtanner/workspace/issues/AP-DEVCONF/ansible-misc/library/herringbone.py
+<127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: jtanner
+<127.0.0.1> EXEC /bin/sh -c 'echo ~ && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/jtanner/.ansible/tmp/ansible-tmp-1515594561.87-15045663361938 `" && echo ansible-tmp-1515594561.87-15045663361938="` echo /home/jtanner/.ansible/tmp/ansible-tmp-1515594561.87-15045663361938 `" ) && sleep 0'
+<127.0.0.1> PUT /tmp/tmpuZ5vML TO /home/jtanner/.ansible/tmp/ansible-tmp-1515594561.87-15045663361938/herringbone.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/jtanner/.ansible/tmp/ansible-tmp-1515594561.87-15045663361938/ /home/jtanner/.ansible/tmp/ansible-tmp-1515594561.87-15045663361938/herringbone.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/usr/bin/python /home/jtanner/.ansible/tmp/ansible-tmp-1515594561.87-15045663361938/herringbone.py; rm -rf "/home/jtanner/.ansible/tmp/ansible-tmp-1515594561.87-15045663361938/" > /dev/null 2>&1 && sleep 0'
+ok: [localhost] => {
+    "attempts": 1, 
+    "changed": false, 
+    "invocation": {
+        "module_args": {
+            "state": "present"
+        }
+    }
+}
+META: ran handlers
+META: ran handlers
+
+PLAY RECAP ********************************************************************************************************
+localhost                  : ok=13   changed=0    unreachable=0    failed=0   
+
+## RC: 0
