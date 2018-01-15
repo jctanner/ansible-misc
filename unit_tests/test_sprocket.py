@@ -11,6 +11,9 @@ from ansible.modules.gears import sprocket
 @pytest.fixture()
 def handle_test_outputs(request):
 
+    # kind of replicates pytest's tmpdir fixture
+    #   https://docs.pytest.org/en/latest/tmpdir.html
+
     # emit a directory to write test files to
     testdir = tempfile.mkdtemp()
     yield testdir
