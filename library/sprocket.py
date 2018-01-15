@@ -8,6 +8,16 @@ GEARDIR = '/tmp/gears'
 GEARNAME = 'sprocket'
 
 
+def set_gear(gearname, filepath):
+    with open(filepath, 'w') as f:
+        f.write(gearname + '\n')
+
+
+def unset_gear(filepath):
+    if os.path.isfile(filepath):
+        os.remove(filepath)
+
+
 def run_module():
 
     gearfile = os.path.join(GEARDIR, '{}.txt'.format(GEARNAME))
@@ -32,13 +42,12 @@ def run_module():
         if not os.path.isfile(gearfile):
             result['changed'] = True
             if not module.check_mode:
-                with open(gearfile, 'w') as f:
-                    f.write(GEARNAME + '\n')
+                set_gear(GEARNAME, gearfile)
     else:
         if os.path.isfile(gearfile):
             result['changed'] = True
             if not module.check_mode:
-                os.remove(gearfile)
+                unset_gear(gearfile)
 
     module.exit_json(**result)
 
