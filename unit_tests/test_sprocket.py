@@ -16,9 +16,7 @@ def handle_test_outputs(request):
     yield testdir
 
     # cleanup the directory once the test completes
-    def cleanup():
-        shutil.rmtree(testdir)        
-    request.addfinalizer(cleanup)
+    shutil.rmtree(testdir)        
 
 
 def test_sprocket_set_gear(handle_test_outputs):
@@ -37,16 +35,15 @@ def test_sprocket_set_gear(handle_test_outputs):
         fdata = f.read()
     assert fdata == 'test\n'
 
-    os.remove(fn)
-
 
 def test_sprocket_unset_gear(handle_test_outputs):
-    # unset_gear(gearname, gearfile)
 
+    # declare the gear file with the test dir as the path
     fn = os.path.join(handle_test_outputs, 'testgear.txt')
     with open(fn, 'w') as f:
         f.write('test\n')
 
+    # try getting rid of it with unset_gear
     sprocket.unset_gear(fn)
 
     assert not os.path.isfile(fn)    
